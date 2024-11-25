@@ -10,7 +10,6 @@ This application uses **JWT (JSON Web Token)** for secure user authentication. J
    - The JWT token is stored as an **HTTP cookie** in the user's browser.
 
 2. **Token Storage:**
-   - The JWT token is stored in a **secure cookie** (with the `HttpOnly` flag) to prevent unauthorized access from JavaScript.
    - The token is sent with every subsequent request to the server, allowing the user to stay authenticated across multiple requests.
 
 3. **Token Expiration:**
@@ -101,8 +100,5 @@ In addition to user authentication, this application also implements **role-base
 1. **Admin Request:**
    Admins have access to special routes that regular users cannot access. For example, to see all users in the application, the admin can make a request like this:
 
-   ```bash
-   # Admin access to view all users
-   GET /admin/users
-   Authorization: Bearer <admin-jwt-token>
+
 
